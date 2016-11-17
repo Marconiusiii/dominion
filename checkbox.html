@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<HTML LANG="en">
+	<HEAD>
+		<META CHARSET="UTF-8">
+		<TITLE>Dominion Deck Chooser</TITLE>
+	<style type="text/css">
+.cardinfo {
+	padding: 15px;
+	margin: 5px;
+	border: 2px solid #000;
+	border-radius: 4px 4px 0px 0px;
+	display: none;
+}
+
+.decklist {
+	border: 5px solid #FFA500;
+	border-radius: 4px;
+	}
+
+.cellar {
+	background: #ffffff;
+}
+.market {
+	background: #fffff;
+	}
+
+.militia {
+	background: #fff;
+	}
+
+.mine {
+	background: #fff;
+}
+.moat {
+	background: #008080;
+	}
+
+.remodel {
+	background: #fff;
+	}
+
+.smithy {
+	background: #fff;
+	}
+
+.village {
+	background: #fff;
+	}
+
+.woodcutter {
+	background: #fff;
+	}
+
+.workshop {
+	background: #fff;
+
+
+	</style>
+	<script type= "text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script type= "text/javascript">
+$ ( document ). ready ( function (){
+$ ( 'input[type="checkbox"]' ). click ( function (){
+if ( $ ( this ). attr ( "value" )== "cellar" ){
+$ ( ".cellar" ). toggle ();
+	}
+if ( $ ( this ). attr ( "value" )== "market" ){
+$ ( ".market" ). toggle ();
+	}
+if ( $ ( this ). attr ( "value" )== "militia" ){
+$ ( ".militia" ). toggle ();
+	}
+if ( $ ( this ). attr ( "value" )== "mine" ){
+$ ( ".mine" ). toggle ();
+	}
+if ( $ ( this ). attr ( "value" )== "moat" ){
+$ ( ".moat" ). toggle ();
+	}
+if ( $ ( this ). attr ( "value" )== "remodel" ){
+$ ( ".remodel" ). toggle ();
+	}
+if ( $ ( this ). attr ( "value" )== "smithy" ){
+$ ( ".smithy" ). toggle ();
+	}
+if ( $ ( this ). attr ( "value" )== "village" ){
+$ ( ".village" ). toggle ();
+	}
+if ( $ ( this ). attr ( "value" )== "woodcutter" ){
+$ ( ".woodcutter" ). toggle ();
+	}
+if ( $ ( this ). attr ( "value" )== "workshop" ){
+$ ( ".workshop" ). toggle ();
+	}
+	});
+});
+	</script>
+	</HEAD>
+	<BODY>
+		<header>
+	<h1>Dominion Deck Chooser</h1>
+	</header>
+		<main>
+		<p>Use the following checkboxes to pick the 10 Dominion decks being used in your game to generate an accessuble card glossary.</p>
+		<form>
+		<fieldset><legend>Choose 10 Decks, card info will appear below</legend>
+		<input type= "checkbox" class= "checkbox" name= "check" value= "cellar" id= "cellar"><label for= "cellar">Cellar</label>
+		<input type= "checkbox" class= "checkbox" name= "check" value= "market" id= "market"><label for= "market">Market</label>
+		<input type= "checkbox" class= "checkbox" name= "check" value= "militia" id= "militia"><label for= "militia">Militia</label>
+		<input type= "checkbox" class= "checkbox"  name= "check" value= "mine" id= "mine"><label for= "mine">Mine</label>
+		<input type= "checkbox" class= "checkbox"  name= "check" value= "moat" id= "moat"><label for= "moat">Moat</label>
+		<input type= "checkbox" class= "checkbox" name= "check" value= "remodel" id= "remodel"><label for= "remodel">Remodel</label>
+		<input type= "checkbox" class= "checkbox"  name= "check" value= "smithy" id= "smithy"><label for= "smithy">Smithy</label>
+		<input type= "checkbox" class= "checkbox"  name= "check" value= "village" id= "village"><label for= "village">Village</label>
+		<input type= "checkbox" class= "checkbox"  name= "check" value= "woodcutter" id= "woodcutter"><label for= "woodcutter">Woodcutter</label>
+		<input type= "checkbox" class= "checkbox"  name= "check" value= "workshop" id= "workshop"><label for= "workshop">Workshop</label>
+	</fieldset>
+	</form>
+	<section class= "decklist" aria-label= "Card Info" tabindex= "0" aria-live= "polite" aria-atomic= "false" aria-relevant= "additions text">
+	<div class= "cellar cardinfo">
+		<h3>Cellar CLLAR</h3>
+			<p>Cost 2, 1 Action, 1 cart for each card discarded from hand.</p>
+	</div>
+	<div class= "market cardinfo">
+	<h3>Market MARKT</h3>
+				<p>Cost 5, 1 cart, 1 action, 1 buy, 1 Copper</p>
+	</div>
+	<div class= "militia cardinfo">
+	<h3>Militia</h3>
+				<p>Cost 4, 2 Copper, all other players discard down to 3 cards</p>
+	</div>
+	<div class= "mine cardinfo">
+	<h3>Mine</h3>
+	<p>Cost 5 Trash treasure card and add next tier treasure card to hand.</p>
+	</div>
+		<div class= "moat cardinfo">
+		<h3>Moat</h3>
+		<p>Cost 2. 2 Cards, protects from attacks.</p>
+		</div>
+		<div class= "remodel cardinfo">
+		<h3>Remodel RMDL</h3>
+		<p>Cost 4. Trash cards, get cards 2 cost levels above trashed cards.</p>
+		</div>
+		<div class= "smithy cardinfo">
+		<h3>Smithy SMTHY</h3>
+		<p>Cost 4. 3 Cards.</p>
+		</div>
+		<div class= "village cardinfo">
+		<h3>Village VLGE</h3>
+	<p>Cost 3. 1 Card, 2 Actions.</p>
+		</div>
+		<div class= "woodcutter cardinfo">
+		<h3>Woodcutter WDCT</h3>
+		<p>Cost 3. 1 Buy, 2 Treasure.</p>
+		</div>
+		<div class= "workshop cardinfo">
+		<h3>Workshop WKSHP</h3>
+		<p>Cost 3. Gain card costing up to 4.</p>
+		</div>
+	</section>
+	</main>
+	</body>
+</html>
